@@ -141,10 +141,10 @@ body{
 						width: 195px;
 						.pseudolink{
 							@include pic;
-							background-position: -12px -282px; 
+							background-position: 0 -282px; 
 							height: 112px;
 							margin: 10px auto;
-							width: 112px;
+							width: 140px;
 						}
 						a{
 							&:last-child{

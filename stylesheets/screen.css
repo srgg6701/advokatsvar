@@ -330,10 +330,10 @@ body #container #top main section#guarantee-badge {
 /* line 142, ../sass/screen.scss */
 body #container #top main section#guarantee-badge .pseudolink {
   background: url(../images/pic.png) no-repeat top left;
-  background-position: -12px -282px;
+  background-position: 0 -282px;
   height: 112px;
   margin: 10px auto;
-  width: 112px;
+  width: 140px;
 }
 /* line 150, ../sass/screen.scss */
 body #container #top main section#guarantee-badge a:last-child {
