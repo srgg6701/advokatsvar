@@ -9,7 +9,12 @@
 <link href="stylesheets/ie.css" rel="stylesheet" type="text/css">
 <![endif]-->
 <script src="js/jquery-1.9.1.js"></script>
+<script src="js/debug.js"></script>
 <script>
+var urlParams=getUrlParams();
+if(urlParams.debug)
+	document.write('<link media="screen" href="stylesheets/debug.css" rel="stylesheet" type="text/css">');
+
 $( function(){
 	console.log('Hello again!');
 });
