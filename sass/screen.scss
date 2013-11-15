@@ -4,3 +4,43 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset";
+@import "compass/layout";
+@import "compass/typography"; /* including lists */
+@import "compass/utilities";
+
+@include establish-baseline;
+
+$max-width:920px;
+
+b{
+	font-weight: bold;
+}
+
+body{
+	*{
+		box-sizing:border-box;
+	}
+	header,main{
+		max-width: $max-width;
+		margin: auto;
+	}
+	header{
+		nav{
+			#logo{
+				float: left;
+			}
+			menu{
+				float: right;
+				ul{ 
+					@include horizontal-list(7px, right);
+					/*li{
+
+					}*/
+				}
+			}
+		}		
+	}
+	main{
+
+	}
+}

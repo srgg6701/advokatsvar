@@ -66,3 +66,72 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
+
+/* including lists */
+/* line 61, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+* html {
+  font-size: 100%;
+}
+
+/* line 64, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+html {
+  font-size: 16px;
+  line-height: 1.5em;
+}
+
+/* line 15, ../sass/screen.scss */
+b {
+  font-weight: bold;
+}
+
+/* line 20, ../sass/screen.scss */
+body * {
+  box-sizing: border-box;
+}
+/* line 23, ../sass/screen.scss */
+body header, body main {
+  max-width: 920px;
+  margin: auto;
+}
+/* line 29, ../sass/screen.scss */
+body header nav #logo {
+  float: left;
+}
+/* line 32, ../sass/screen.scss */
+body header nav menu {
+  float: right;
+}
+/* line 34, ../sass/screen.scss */
+body header nav menu ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  *zoom: 1;
+  					/*li{
+  
+  					}*/
+}
+/* line 60, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+body header nav menu ul li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  white-space: nowrap;
+  display: inline;
+  float: right;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+/* line 48, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+body header nav menu ul li:first-child, body header nav menu ul li.first {
+  padding-right: 0;
+}
+/* line 49, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+body header nav menu ul li:last-child {
+  padding-left: 0;
+}
+/* line 50, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+body header nav menu ul li.last {
+  padding-left: 0;
+}
