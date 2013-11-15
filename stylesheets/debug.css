@@ -1,4 +1,20 @@
 /* line 1, ../sass/debug.scss */
-div {
-  border: solid 1px #ccc;
+body {
+  background: url(../_sources/pg_test.png) 172px 0 no-repeat;
+}
+/* line 3, ../sass/debug.scss */
+body #container {
+  opacity: 0.5;
+}
+/* line 5, ../sass/debug.scss */
+body #container #top {
+  background: none !important;
+}
+
+/* line 14, ../sass/debug.scss */
+div,
+header,
+h1, h2, h3, h4, h5,
+section {
+  box-shadow: 0 0 0 1px #FFA500 inset;
 }

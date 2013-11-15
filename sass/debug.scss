@@ -1,3 +1,16 @@
-div{
-	border: solid 1px #ccc;
+body{
+	background: url(../_sources/pg_test.png) 172px 0 no-repeat;
+	#container {
+		opacity: 0.5;
+	  	#top{
+	  		background:none !important;
+	  	}
+	}
+}
+div,
+header,
+// ul,
+h1,h2,h3,h4,h5,
+section{
+	box-shadow: 0 0 0 1px #FFA500 inset;
 }

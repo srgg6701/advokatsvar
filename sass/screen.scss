@@ -4,43 +4,159 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset";
+@import "compass/css3";
 @import "compass/layout";
-@import "compass/typography"; /* including lists */
-@import "compass/utilities";
-
+@import "compass/typography"; /* inc lists */
+@import "compass/utilities"; /* inc clearfix */
+  
+/**/
 @include establish-baseline;
 
+$bg-dark-marine:#0F1128;
+
 $max-width:920px;
+
+@mixin clrfx{
+	&:after{
+		content:"";
+	}
+	clear:both;
+	display:block;
+}
+
+@mixin bgColor($bgcolor:$bg-dark-marine){
+	background-color: $bgcolor; 
+}
+
+@mixin pic{
+	background: url(../images/pic.png) no-repeat top left;
+}
+.client-face-1{ background-position: 0 0; width: 90px; height: 90px; } 
+.client-face-2{ background-position: 0 -94px; width: 90px; height: 90px; } 
+.client-face-3{ background-position: 0 -188px; width: 90px; height: 90px; } 
+.how-it-works{ background-position: 0 -397px; width: 453px; height: 193px; } 
+.icon-payment-types{ background-position: 0 -624px; width: 181px; height: 32px; }
+.lo-1{ background-position: 0 -689px; width: 186px; height: 107px; } 
+.lo-2{ background-position: 0 -800px; width: 186px; height: 107px; } 
+.lo-3{ background-position: 0 -911px; width: 186px; height: 107px; } 
+.lo-4{ background-position: 0 -1022px; width: 186px; height: 107px; } 
+.lo-5{ background-position: 0 -1133px; width: 186px; height: 106px; } 
+.lo-6{ background-position: 0 -1243px; width: 186px; height: 107px; } 
+.lo-7{ background-position: 0 -1354px; width: 236px; height: 116px; } 
+
 
 b{
 	font-weight: bold;
 }
 
 body{
+	background-size: cover;
 	*{
-		box-sizing:border-box;
+		@include box-sizing(border-box);
+		font-family: Lato, "Times New Roman"; //sans-serif
 	}
-	header,main{
+	.centered,
+	main,
+	#stuff{
 		max-width: $max-width;
 		margin: auto;
 	}
-	header{
-		nav{
-			#logo{
-				float: left;
+			
+	#container{
+		@include clearfix;
+		@include clrfx;			
+		#top{
+			background: url(../images/landing-photo.jpg) no-repeat center;
+			min-height: 100%;
+			position:fixed; 
+			width:100%; 
+			z-index: -1;
+			header{
+				nav{
+					@include bgColor;
+					@include clearfix;
+					#logo{
+						background: url(../images/logo.png) no-repeat top left;
+						float: left;
+						height:20px;
+						margin: 19px auto 13px;
+						width: 203px;
+						a{
+							visibility: hidden;
+						}
+					}
+					menu{
+						float: right;
+						margin-right: 7px;
+						ul{ 
+							@include horizontal-list(7px, right);
+							margin: 23px auto 12px;
+							li{
+								line-height: 15px;
+								padding: 0;
+								margin: auto 11.5px;
+								a{
+									color: white;
+									font-size: 0.9375em;
+									opacity: 0.8;
+									text-decoration: none;
+								}
+							}
+						}
+					}
+				}		
 			}
-			menu{
-				float: right;
-				ul{ 
-					@include horizontal-list(7px, right);
-					/*li{
-
-					}*/
+			main{
+				section{
+					@include float(left);
+					&#guarantee-badge{ 
+						@include pic;
+						background-position: 0 -282px; width: 139px; height: 111px; 
+						@include float(right);
+					} 
+					&#advokats{
+						@include clearfix;
+						@include clrfx;
+						div{
+							&#dossier{
+								@include float(left);
+								margin-left: 125px;
+							}
+						}
+					}
 				}
-			}
-		}		
-	}
-	main{
+				ul{
+					&[class^="icon-"]{ 
+						li{
+							@include pic;
+							line-height: 27px;
+							margin: 8px auto;
+							padding-left: 37px;				
+						}
+					} 
+					&.icon-ok{
+						li{
+							background-position: 0 -594px; 
+						}
+					}
+					&.icon-x{
+						li{
+							background-position: 0 -660px; width: 25px; height: 25px; 
+						}
 
+					} 
+			
+				}
+			}		
+		}
+		#content{
+			background-color:$bg-dark-marine;
+			position: absolute;
+			top: 100%;
+			width: 100%;
+			#stuff{				
+				color: white; 	
+			}
+		}
 	}
 }
