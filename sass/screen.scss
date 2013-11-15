@@ -5,7 +5,7 @@
 
 @import "compass/reset";
 @import "compass/css3";
-@import "compass/layout";
+//@import "compass/layout";
 @import "compass/typography"; /* inc lists */
 @import "compass/utilities"; /* inc clearfix */
   
@@ -13,8 +13,13 @@
 @include establish-baseline;
 
 $bg-dark-marine:#0F1128;
+$color-salad:#5FB00D;
+$color-salad-border:#4C8F09;
+$color-salad-shadow:#71B929;
+
 
 $max-width:920px;
+$middle-width:780px;
 
 @mixin clrfx{
 	&:after{
@@ -44,6 +49,9 @@ $max-width:920px;
 .lo-6{ background-position: 0 -1243px; width: 186px; height: 107px; } 
 .lo-7{ background-position: 0 -1354px; width: 236px; height: 116px; } 
 
+.corner{
+	@include rotate(45deg);
+}
 
 b{
 	font-weight: bold;
@@ -55,11 +63,17 @@ body{
 		@include box-sizing(border-box);
 		font-family: Lato, "Times New Roman"; //sans-serif
 	}
-	.centered,
-	main,
-	#stuff{
-		max-width: $max-width;
+	.header2{
+		font-size: 2.5em;
+		font-weight: bold;
+	}
+	.middle{
 		margin: auto;
+		max-width: $middle-width;
+	}	
+	.wide{
+		margin: auto;
+		max-width: $max-width;
 	}
 			
 	#container{
@@ -72,27 +86,30 @@ body{
 			width:100%; 
 			z-index: -1;
 			header{
+				#top_middle{
+					margin: 51px auto 14px;
+				}
 				nav{
 					@include bgColor;
 					@include clearfix;
 					#logo{
 						background: url(../images/logo.png) no-repeat top left;
-						float: left;
+						@include float(left);
 						height:20px;
-						margin: 19px auto 13px;
+						margin: 19px auto 12px;
 						width: 203px;
 						a{
 							visibility: hidden;
 						}
 					}
 					menu{
-						float: right;
+						@include float(right);
 						margin-right: 7px;
 						ul{ 
 							@include horizontal-list(7px, right);
-							margin: 23px auto 12px;
+							margin: 21px auto 12px;
 							li{
-								line-height: 15px;
+								line-height: 17px;
 								padding: 0;
 								margin: auto 11.5px;
 								a{
@@ -109,39 +126,122 @@ body{
 			main{
 				section{
 					@include float(left);
+					margin-top: 18px;
 					&#guarantee-badge{ 
-						@include pic;
-						background-position: 0 -282px; width: 139px; height: 111px; 
 						@include float(right);
+						margin: 19px 2px;
+						width: 195px;
+						.pseudolink{
+							@include pic;
+							background-position: -12px -282px; 
+							height: 112px;
+							margin: 10px auto;
+							width: 112px;
+						}
+						a{
+							&:last-child{
+								@include bgColor($color-salad);
+								@include border-radius(5px);
+								border: solid 1px $color-salad-border;
+								box-shadow: 1px 1px 3px 0 #666; 
+								color: white;
+								display: block;
+								margin-top: 18px;
+								padding: 12px;
+								text-align: center;
+								text-decoration: none;
+								width: 100%;
+								&:hover{
+									@include background-image(linear-gradient(#5FB00D, #69C30E));
+								}
+							}							
+						}
 					} 
 					&#advokats{
 						@include clearfix;
 						@include clrfx;
+						margin-top: 10px;
+						width: 100%;
 						div{
-							&#dossier{
+							&#adv{
 								@include float(left);
-								margin-left: 125px;
+								width: 100px;								
+								img{
+									&:first-child{
+										margin-left: 5px;
+										@include float(left);
+									}
+								}		
+								p{
+									line-height: 20px;
+									opacity: 0.8;
+									text-align: center;									
+								}
+							}						
+							&#dossier{
+								@include border-radius(4px);
+								@include float(right);
+								background-color: #FF0;
+								max-width:641px;
+								padding: 20px;
+								position: relative;
+								.crn_wrapper{
+									height: 20px;
+									left: -20px;
+									position: absolute;
+									top: 20px;
+									width: 20px;
+									overflow: hidden;
+									.corner{										
+										background: #FF0;
+										height: 24px;
+										width: 24px;
+										margin-top: -12px;
+										margin-left: 8px;
+									}
+								}								
+							}
+							&#slides_indicators{
+								@include clrfx;
+								@include clearfix;
+								padding: 12px 17.5px;
+								div{
+									background-color: #FFF;
+									@include border-radius(2px);
+									@include float(left);
+									height: 15px;
+									margin-right: 10px;
+									width: 15px;
+									&.active{
+										@include bgColor;
+									}
+								}
 							}
 						}
 					}
 				}
-				ul{
+				ul{	
+					&#ok_left{
+						margin-top: -5px;
+					}
 					&[class^="icon-"]{ 
 						li{
 							@include pic;
-							line-height: 27px;
-							margin: 8px auto;
+							font-size: 1.125em;
+							font-weight: bold;
+							line-height: 30px;
+							margin: 12px auto;
 							padding-left: 37px;				
 						}
 					} 
 					&.icon-ok{
 						li{
-							background-position: 0 -594px; 
+							background-position: 0 -592px; 
 						}
 					}
 					&.icon-x{
 						li{
-							background-position: 0 -660px; width: 25px; height: 25px; 
+							background-position: 0 -660px;
 						}
 
 					} 
@@ -151,11 +251,21 @@ body{
 		}
 		#content{
 			background-color:$bg-dark-marine;
+			min-height: 100%;
 			position: absolute;
 			top: 100%;
 			width: 100%;
 			#stuff{				
-				color: white; 	
+				color: white; 
+				padding: 80px 0;
+				h2{
+					&.header2{
+						margin-bottom: 20px;
+						&+p{
+							margin: 30px auto;
+						}
+					}
+				}	
 			}
 		}
 	}

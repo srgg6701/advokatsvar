@@ -81,125 +81,142 @@ html {
   line-height: 1.5em;
 }
 
-/* line 34, ../sass/screen.scss */
+/* line 39, ../sass/screen.scss */
 .client-face-1 {
   background-position: 0 0;
   width: 90px;
   height: 90px;
 }
 
-/* line 35, ../sass/screen.scss */
+/* line 40, ../sass/screen.scss */
 .client-face-2 {
   background-position: 0 -94px;
   width: 90px;
   height: 90px;
 }
 
-/* line 36, ../sass/screen.scss */
+/* line 41, ../sass/screen.scss */
 .client-face-3 {
   background-position: 0 -188px;
   width: 90px;
   height: 90px;
 }
 
-/* line 37, ../sass/screen.scss */
+/* line 42, ../sass/screen.scss */
 .how-it-works {
   background-position: 0 -397px;
   width: 453px;
   height: 193px;
 }
 
-/* line 38, ../sass/screen.scss */
+/* line 43, ../sass/screen.scss */
 .icon-payment-types {
   background-position: 0 -624px;
   width: 181px;
   height: 32px;
 }
 
-/* line 39, ../sass/screen.scss */
+/* line 44, ../sass/screen.scss */
 .lo-1 {
   background-position: 0 -689px;
   width: 186px;
   height: 107px;
 }
 
-/* line 40, ../sass/screen.scss */
+/* line 45, ../sass/screen.scss */
 .lo-2 {
   background-position: 0 -800px;
   width: 186px;
   height: 107px;
 }
 
-/* line 41, ../sass/screen.scss */
+/* line 46, ../sass/screen.scss */
 .lo-3 {
   background-position: 0 -911px;
   width: 186px;
   height: 107px;
 }
 
-/* line 42, ../sass/screen.scss */
+/* line 47, ../sass/screen.scss */
 .lo-4 {
   background-position: 0 -1022px;
   width: 186px;
   height: 107px;
 }
 
-/* line 43, ../sass/screen.scss */
+/* line 48, ../sass/screen.scss */
 .lo-5 {
   background-position: 0 -1133px;
   width: 186px;
   height: 106px;
 }
 
-/* line 44, ../sass/screen.scss */
+/* line 49, ../sass/screen.scss */
 .lo-6 {
   background-position: 0 -1243px;
   width: 186px;
   height: 107px;
 }
 
-/* line 45, ../sass/screen.scss */
+/* line 50, ../sass/screen.scss */
 .lo-7 {
   background-position: 0 -1354px;
   width: 236px;
   height: 116px;
 }
 
-/* line 48, ../sass/screen.scss */
+/* line 52, ../sass/screen.scss */
+.corner {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* line 56, ../sass/screen.scss */
 b {
   font-weight: bold;
 }
 
-/* line 52, ../sass/screen.scss */
+/* line 60, ../sass/screen.scss */
 body {
   background-size: cover;
 }
-/* line 54, ../sass/screen.scss */
+/* line 62, ../sass/screen.scss */
 body * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   font-family: Lato, "Times New Roman";
 }
-/* line 60, ../sass/screen.scss */
-body .centered,
-body main,
-body #stuff {
-  max-width: 920px;
-  margin: auto;
+/* line 66, ../sass/screen.scss */
+body .header2 {
+  font-size: 2.5em;
+  font-weight: bold;
 }
-/* line 65, ../sass/screen.scss */
+/* line 70, ../sass/screen.scss */
+body .middle {
+  margin: auto;
+  max-width: 780px;
+}
+/* line 74, ../sass/screen.scss */
+body .wide {
+  margin: auto;
+  max-width: 920px;
+}
+/* line 79, ../sass/screen.scss */
 body #container {
   overflow: hidden;
   *zoom: 1;
   clear: both;
   display: block;
 }
-/* line 20, ../sass/screen.scss */
+/* line 25, ../sass/screen.scss */
 body #container:after {
   content: "";
 }
-/* line 68, ../sass/screen.scss */
+/* line 82, ../sass/screen.scss */
 body #container #top {
   background: url(../images/landing-photo.jpg) no-repeat center;
   min-height: 100%;
@@ -207,37 +224,43 @@ body #container #top {
   width: 100%;
   z-index: -1;
 }
-/* line 75, ../sass/screen.scss */
+/* line 89, ../sass/screen.scss */
+body #container #top header #top_middle {
+  margin: 51px auto 14px;
+}
+/* line 92, ../sass/screen.scss */
 body #container #top header nav {
   background-color: #0f1128;
   overflow: hidden;
   *zoom: 1;
 }
-/* line 78, ../sass/screen.scss */
+/* line 95, ../sass/screen.scss */
 body #container #top header nav #logo {
   background: url(../images/logo.png) no-repeat top left;
+  display: inline;
   float: left;
   height: 20px;
-  margin: 19px auto 13px;
+  margin: 19px auto 12px;
   width: 203px;
 }
-/* line 84, ../sass/screen.scss */
+/* line 101, ../sass/screen.scss */
 body #container #top header nav #logo a {
   visibility: hidden;
 }
-/* line 88, ../sass/screen.scss */
+/* line 105, ../sass/screen.scss */
 body #container #top header nav menu {
+  display: inline;
   float: right;
   margin-right: 7px;
 }
-/* line 91, ../sass/screen.scss */
+/* line 108, ../sass/screen.scss */
 body #container #top header nav menu ul {
   margin: 0;
   padding: 0;
   border: 0;
   overflow: hidden;
   *zoom: 1;
-  margin: 23px auto 12px;
+  margin: 21px auto 12px;
 }
 /* line 60, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
 body #container #top header nav menu ul li {
@@ -262,75 +285,197 @@ body #container #top header nav menu ul li:last-child {
 body #container #top header nav menu ul li.last {
   padding-left: 0;
 }
-/* line 94, ../sass/screen.scss */
+/* line 111, ../sass/screen.scss */
 body #container #top header nav menu ul li {
-  line-height: 15px;
+  line-height: 17px;
   padding: 0;
   margin: auto 11.5px;
 }
-/* line 98, ../sass/screen.scss */
+/* line 115, ../sass/screen.scss */
 body #container #top header nav menu ul li a {
   color: white;
   font-size: 0.9375em;
   opacity: 0.8;
   text-decoration: none;
 }
-/* line 110, ../sass/screen.scss */
+/* line 127, ../sass/screen.scss */
 body #container #top main section {
   display: inline;
   float: left;
+  margin-top: 18px;
 }
-/* line 112, ../sass/screen.scss */
+/* line 130, ../sass/screen.scss */
 body #container #top main section#guarantee-badge {
-  background: url(../images/pic.png) no-repeat top left;
-  background-position: 0 -282px;
-  width: 139px;
-  height: 111px;
   display: inline;
   float: right;
+  margin: 19px 2px;
+  width: 195px;
 }
-/* line 117, ../sass/screen.scss */
+/* line 134, ../sass/screen.scss */
+body #container #top main section#guarantee-badge .pseudolink {
+  background: url(../images/pic.png) no-repeat top left;
+  background-position: -12px -282px;
+  height: 112px;
+  margin: 10px auto;
+  width: 112px;
+}
+/* line 142, ../sass/screen.scss */
+body #container #top main section#guarantee-badge a:last-child {
+  background-color: #5fb00d;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  border: solid 1px #4c8f09;
+  box-shadow: 1px 1px 3px 0 #666;
+  color: white;
+  display: block;
+  margin-top: 18px;
+  padding: 12px;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+}
+/* line 154, ../sass/screen.scss */
+body #container #top main section#guarantee-badge a:last-child:hover {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #5fb00d), color-stop(100%, #69c30e));
+  background-image: -webkit-linear-gradient(#5fb00d, #69c30e);
+  background-image: -moz-linear-gradient(#5fb00d, #69c30e);
+  background-image: -o-linear-gradient(#5fb00d, #69c30e);
+  background-image: linear-gradient(#5fb00d, #69c30e);
+}
+/* line 160, ../sass/screen.scss */
 body #container #top main section#advokats {
   overflow: hidden;
   *zoom: 1;
   clear: both;
   display: block;
+  margin-top: 10px;
+  width: 100%;
 }
-/* line 20, ../sass/screen.scss */
+/* line 25, ../sass/screen.scss */
 body #container #top main section#advokats:after {
   content: "";
 }
-/* line 121, ../sass/screen.scss */
-body #container #top main section#advokats div#dossier {
+/* line 166, ../sass/screen.scss */
+body #container #top main section#advokats div#adv {
   display: inline;
   float: left;
-  margin-left: 125px;
+  width: 100px;
 }
-/* line 130, ../sass/screen.scss */
+/* line 170, ../sass/screen.scss */
+body #container #top main section#advokats div#adv img:first-child {
+  margin-left: 5px;
+  display: inline;
+  float: left;
+}
+/* line 175, ../sass/screen.scss */
+body #container #top main section#advokats div#adv p {
+  line-height: 20px;
+  opacity: 0.8;
+  text-align: center;
+}
+/* line 181, ../sass/screen.scss */
+body #container #top main section#advokats div#dossier {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  display: inline;
+  float: right;
+  background-color: #FF0;
+  max-width: 641px;
+  padding: 20px;
+  position: relative;
+}
+/* line 188, ../sass/screen.scss */
+body #container #top main section#advokats div#dossier .crn_wrapper {
+  height: 20px;
+  left: -20px;
+  position: absolute;
+  top: 20px;
+  width: 20px;
+  overflow: hidden;
+}
+/* line 195, ../sass/screen.scss */
+body #container #top main section#advokats div#dossier .crn_wrapper .corner {
+  background: #FF0;
+  height: 24px;
+  width: 24px;
+  margin-top: -12px;
+  margin-left: 8px;
+}
+/* line 204, ../sass/screen.scss */
+body #container #top main section#advokats div#slides_indicators {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  *zoom: 1;
+  padding: 12px 17.5px;
+}
+/* line 25, ../sass/screen.scss */
+body #container #top main section#advokats div#slides_indicators:after {
+  content: "";
+}
+/* line 208, ../sass/screen.scss */
+body #container #top main section#advokats div#slides_indicators div {
+  background-color: #FFF;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  display: inline;
+  float: left;
+  height: 15px;
+  margin-right: 10px;
+  width: 15px;
+}
+/* line 215, ../sass/screen.scss */
+body #container #top main section#advokats div#slides_indicators div.active {
+  background-color: #0f1128;
+}
+/* line 224, ../sass/screen.scss */
+body #container #top main ul#ok_left {
+  margin-top: -5px;
+}
+/* line 228, ../sass/screen.scss */
 body #container #top main ul[class^="icon-"] li {
   background: url(../images/pic.png) no-repeat top left;
-  line-height: 27px;
-  margin: 8px auto;
+  font-size: 1.125em;
+  font-weight: bold;
+  line-height: 30px;
+  margin: 12px auto;
   padding-left: 37px;
 }
-/* line 138, ../sass/screen.scss */
+/* line 238, ../sass/screen.scss */
 body #container #top main ul.icon-ok li {
-  background-position: 0 -594px;
+  background-position: 0 -592px;
 }
-/* line 143, ../sass/screen.scss */
+/* line 243, ../sass/screen.scss */
 body #container #top main ul.icon-x li {
   background-position: 0 -660px;
-  width: 25px;
-  height: 25px;
 }
-/* line 152, ../sass/screen.scss */
+/* line 252, ../sass/screen.scss */
 body #container #content {
   background-color: #0f1128;
+  min-height: 100%;
   position: absolute;
   top: 100%;
   width: 100%;
 }
-/* line 157, ../sass/screen.scss */
+/* line 258, ../sass/screen.scss */
 body #container #content #stuff {
   color: white;
+  padding: 80px 0;
+}
+/* line 262, ../sass/screen.scss */
+body #container #content #stuff h2.header2 {
+  margin-bottom: 20px;
+}
+/* line 264, ../sass/screen.scss */
+body #container #content #stuff h2.header2 + p {
+  margin: 30px auto;
 }
