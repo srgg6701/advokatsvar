@@ -5,7 +5,7 @@
 
 @import "compass/reset";
 @import "compass/css3";
-//@import "compass/layout";
+@import "compass/layout";
 @import "compass/typography"; /* inc lists */
 @import "compass/utilities"; /* inc clearfix */
   
@@ -56,12 +56,21 @@ $middle-width:780px;
 b{
 	font-weight: bold;
 }
+em{
+	font-style: italic;
+}
 
 body{
 	background-size: cover;
 	*{
 		@include box-sizing(border-box);
 		font-family: Lato, "Times New Roman"; //sans-serif
+	}
+	section{
+		@include float(left);
+		#stuff &{
+			width: 50%;
+		}
 	}
 	.header2{
 		font-size: 2.5em;
@@ -74,13 +83,13 @@ body{
 	.wide{
 		margin: auto;
 		max-width: $max-width;
-	}
-			
+	}			
 	#container{
 		@include clearfix;
 		@include clrfx;			
 		#top{
 			background: url(../images/landing-photo.jpg) no-repeat center;
+			@include background-size(100% 100%);
 			min-height: 100%;
 			position:fixed; 
 			width:100%; 
@@ -125,7 +134,6 @@ body{
 			}
 			main{
 				section{
-					@include float(left);
 					margin-top: 18px;
 					&#guarantee-badge{ 
 						@include float(right);
@@ -181,7 +189,7 @@ body{
 							&#dossier{
 								@include border-radius(4px);
 								@include float(right);
-								background-color: #FF0;
+								background-color: white;
 								max-width:641px;
 								padding: 20px;
 								position: relative;
@@ -193,7 +201,7 @@ body{
 									width: 20px;
 									overflow: hidden;
 									.corner{										
-										background: #FF0;
+										background: white;
 										height: 24px;
 										width: 24px;
 										margin-top: -12px;
@@ -220,33 +228,6 @@ body{
 						}
 					}
 				}
-				ul{	
-					&#ok_left{
-						margin-top: -5px;
-					}
-					&[class^="icon-"]{ 
-						li{
-							@include pic;
-							font-size: 1.125em;
-							font-weight: bold;
-							line-height: 30px;
-							margin: 12px auto;
-							padding-left: 37px;				
-						}
-					} 
-					&.icon-ok{
-						li{
-							background-position: 0 -592px; 
-						}
-					}
-					&.icon-x{
-						li{
-							background-position: 0 -660px;
-						}
-
-					} 
-			
-				}
 			}		
 		}
 		#content{
@@ -266,7 +247,55 @@ body{
 						}
 					}
 				}	
+				section{
+					padding-right: 10px;
+					width: 50%;
+					.header2{
+						font-size: 1.625em;
+						padding-bottom: 30px;
+					}
+					ul{
+						margin-top: -19px;
+					}
+				}
 			}
+		}
+		ul{	
+			&#ok_left{
+				margin-top: -5px;
+			}
+			&[class^="icon-"]{ 
+				li{
+					//@include stretch(false, 1, false, 1);
+					font-size: 1.04em;
+					font-weight: bold;
+					line-height: 30px;
+					margin: 12px auto;
+					span{
+						&:first-child{
+							@include pic;
+							height: 30px;
+							@include inline-block;
+							margin-top: -3px;
+							width: 36px;					
+						}
+					}				
+				}
+			} 
+			&.icon-ok{
+				li{
+					span[ok]{
+						background-position: 0 -592px;					
+					}
+				}
+			}
+			&.icon-x{				
+				li{
+					span[x]{
+						background-position: 0 -657px;
+					}
+				}
+			} 		
 		}
 	}
 }
