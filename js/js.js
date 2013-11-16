@@ -7,7 +7,13 @@ $( function(){
 		$(this).fadeTo(dur,1);
 	}).click(function(){		
 		$("html, body").animate({ 
-			scrollTop: screen.height+"px" 
+			scrollTop: $('#stuff').offset().top 
 		},500);
 	});
+	var changeLinkColor=function(obj,color){
+		$(obj).css('color',color);
+	};
+	$('#content .wide menu li a')
+		.mouseenter(function(){changeLinkColor(this,'#5FB00C')})
+		.mouseleave(function(){changeLinkColor(this,'inherit')});
 });
