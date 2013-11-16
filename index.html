@@ -3,55 +3,18 @@
 <head>
 <meta charset="utf-8">
 <title>Advokatsvar</title>
-<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-<link media="screen" href="stylesheets/screen.css" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Lato:400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+<link id="css_screen" media="screen" href="stylesheets/screen.css" rel="stylesheet" type="text/css">
 <link media="print" href="stylesheets/print.css" rel="stylesheet" type="text/css">
 <!--[if lt IE 9]>
 <link href="stylesheets/ie.css" rel="stylesheet" type="text/css">
 <![endif]-->
-<script src="js/jquery-1.9.1.js"></script>
-<script src="js/debug.js"></script>
-<script>
-var urlParams=getUrlParams();
-if(urlParams.debug)
-	document.write('<link media="screen" href="stylesheets/debug.css" rel="stylesheet" type="text/css">');
 
-$( function(){
-	console.log('Hello again!');
-});
-</script>
+<script src="js/jquery-1.9.1.js"></script>
+<script src="js/js.js"></script>
+<script src="js/debug.js"></script>
 </head>
 <body>
-	<!-- Нижний блок -->
-    <div id="content">
-        <div id="stuff" class="middle">
-            <h2 class="header2">Spar tid og penger</h2>
-            <p>Advokathjelp trenger ikke koste tusenvis av kroner og mye tid:</p>
-            <section>
-                <h2 class="header2">Tradisjonell advokat</h2>
-                <ul class="icon-x">
-                    <li><span x></span>Du må møte ansikt til ansikt</li>
-                    <li><span x></span>Lang svarprosess</li>
-                    <li><span x></span>Du må møte advokaten i <em>deres arbeidstid</em></li>
-                    <li><span x></span>Koster 1000-vis av kroner</li>
-                    <li><span x></span>Svarprosessen kan ta flere uker</li>
-                    <li><span x></span>Du må reise til advokatkontoret</li>
-                </ul>
-            </section>
-            <section>
-                <h2 class="header2">Advokatsvar.no</h2>
-                <ul class="icon-ok">
-                    <li><span ok></span>100% anonymt</li>
-                    <li><span ok></span>Raskt svar tilgjengelig</li>
-                    <li><span ok></span>Åpent 24/7 – spør når det passer deg</li>
-                    <li><span ok></span>Kun 298,-</li>
-                    <li><span ok></span>Svar du kan slå i bordet med, fort!</li>
-                    <li><span ok></span>Still spørsmålet hvor og når du vil</li>
-                </ul>
-            </section>
-        </div>              
-    </div>
-
 	<!-- Верхний, фиксированный блок -->
     <div id="top">
         <header>
@@ -111,11 +74,51 @@ $( function(){
                 </div>
             </section>
         </main>
+        <div id="scroll_down">
+            <div>
+            Se flere fordeler
+                <div class="pointer_down"></div>
+            </div>    
+        </div>
     </div>
 
 	<!-- Контейнер для фона страницы -->
 	<div id="bg_container">
 		&nbsp;
 	</div>
+
+	<!-- Нижний блок -->
+    <div id="content">
+        <div id="stuff" class="middle">
+            <h2 class="header2">Spar tid og penger</h2>
+            <p>Advokathjelp trenger ikke koste tusenvis av kroner og mye tid:</p>
+            <section>
+                <h2 class="header2">Tradisjonell advokat</h2>
+                <ul class="icon-x">
+                    <li><span x></span>Du må møte ansikt til ansikt</li>
+                    <li><span x></span>Lang svarprosess</li>
+                    <li><span x></span>Du må møte advokaten i <em>deres arbeidstid</em></li>
+                    <li><span x></span>Koster 1000-vis av kroner</li>
+                    <li><span x></span>Svarprosessen kan ta flere uker</li>
+                    <li><span x></span>Du må reise til advokatkontoret</li>
+                </ul>
+            </section>
+            <section>
+                <h2 class="header2">Advokatsvar.no</h2>
+                <ul class="icon-ok">
+                    <li><span ok></span>100% anonymt</li>
+                    <li><span ok></span>Raskt svar tilgjengelig</li>
+                    <li><span ok></span>Åpent 24/7 – spør når det passer deg</li>
+                    <li><span ok></span>Kun 298,-</li>
+                    <li><span ok></span>Svar du kan slå i bordet med, fort!</li>
+                    <li><span ok></span>Still spørsmålet hvor og når du vil</li>
+                </ul>
+            </section>
+        </div>
+        <div class="clearfix">
+        	<p class="middle">Få et klart og konsist svar på ditt spørsmål:</p>
+        	<a id="btn_bottom" class="middle" href="#">Spør advokat her &gt;&gt;</a>
+        </div>                   
+    </div>
 </body>
 </html>

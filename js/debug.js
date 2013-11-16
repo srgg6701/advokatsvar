@@ -18,3 +18,21 @@ function getUrlParams(){
 	}
 	return args;
 }
+$(function(){
+	var bg=false;
+	var urlParams=getUrlParams();
+	if(bg=urlParams.debug){ 
+		/* 	значения для bg:
+			1 - подложка для верхней части страницы
+			2 - для нижней
+		 */
+		//document.write('>');
+		$('#css_screen').after('<link media="screen" href="stylesheets/debug.css" rel="stylesheet" type="text/css">');
+		$('#bg_container').css('background','none');
+		$('body').css({
+			background:'url(_sources/pg_test'+bg+'.png) 172px 0 no-repeat fixed'
+		});	
+		$('#content').css('opacity',0.5);
+		$('#top').css('opacity',0.5);
+	}
+});

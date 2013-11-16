@@ -9,33 +9,53 @@
 @import "compass/typography"; /* inc lists */
 @import "compass/utilities"; /* inc clearfix */
   
-/**/
+/* reserved */
 @include establish-baseline;
 
+/* variables */
 $bg-dark-marine:#0F1128;
 $color-salad:#5FB00D;
 $color-salad-border:#4C8F09;
 $color-salad-shadow:#71B929;
-
-
 $max-width:920px;
 $middle-width:780px;
 
+/* mixins, Baby! */
 @mixin clrfx{
+	@include clearfix;
 	&:after{
 		content:"";
 	}
 	clear:both;
 	display:block;
 }
-
+/* Основной тёмно-синий фон (нижняя часть страницы. Меню (немного отличается(?))) */
 @mixin bgColor($bgcolor:$bg-dark-marine){
 	background-color: $bgcolor; 
 }
-
+/* Стандартная зелёная "кнопка "*/
+@mixin green-button($margin-top,$padding:12px,$width:auto){
+	@include bgColor($color-salad);
+	@include border-radius(5px);
+	border: solid 1px $color-salad-border;
+	box-shadow: 1px 1px 3px 0 #666; 
+	color: white;
+	display: block;
+	margin-top: $margin-top;
+	padding: $padding;
+	text-align: center;
+	text-decoration: none;
+	width: $width;	
+	&:hover{
+		@include background-image(linear-gradient(#5FB00D, #69C30E));
+	}
+}							
+/* Спрайт. ...если нужен, конечно. */
 @mixin pic{
 	background: url(../images/pic.png) no-repeat top left;
 }
+
+/*	common classes */
 .client-face-1{ background-position: 0 0; width: 90px; height: 90px; } 
 .client-face-2{ background-position: 0 -94px; width: 90px; height: 90px; } 
 .client-face-3{ background-position: 0 -188px; width: 90px; height: 90px; } 
@@ -49,10 +69,20 @@ $middle-width:780px;
 .lo-6{ background-position: 0 -1243px; width: 186px; height: 107px; } 
 .lo-7{ background-position: 0 -1354px; width: 236px; height: 116px; } 
 
+.clearfix{
+	@include clrfx;
+}
 .corner{
 	@include rotate(45deg);
 }
+.pointer_down{
+	background: url(../images/icon-down.png) no-repeat;
+	height: 26px;
+	margin: 14px auto !important;
+	width: 26px;
+}
 
+/* redefine tags */
 b{
 	font-weight: bold;
 }
@@ -88,7 +118,7 @@ body{
 		margin: auto;
 		max-width: $max-width;
 	}	
-	/*	Сразу после <body>, чтобы позиционировать относительно него */ 
+	/*	Дочерний для <body>, чтобы позиционировать относительно него */ 
 	#content{ 
 		background-color:$bg-dark-marine;
 		min-height: 100%;
@@ -116,7 +146,25 @@ body{
 				}
 				ul{
 					margin-top: -19px;
+					&[class^="icon-"] li{
+						line-height: 29px;
+					}
 				}
+			}
+		}
+		.clearfix{
+			text-align: center;		
+			p{
+				&.middle{
+					color: white;
+					margin-bottom: 10px;
+					margin-top: 13px;
+					text-align: left;
+				}
+			}
+			a{	
+				@include green-button(18px,12px 40px);
+				@include inline-block;							
 			}
 		}
 	}		
@@ -179,25 +227,12 @@ body{
 					}
 					a{
 						&:last-child{
-							@include bgColor($color-salad);
-							@include border-radius(5px);
-							border: solid 1px $color-salad-border;
-							box-shadow: 1px 1px 3px 0 #666; 
-							color: white;
-							display: block;
-							margin-top: 18px;
-							padding: 12px;
-							text-align: center;
-							text-decoration: none;
-							width: 100%;
-							&:hover{
-								@include background-image(linear-gradient(#5FB00D, #69C30E));
-							}
+							@include green-button(18px,12px,100%);
 						}							
 					}
 				} 
 				&#advokats{
-					@include clearfix;
+					//@include clearfix;
 					@include clrfx;
 					margin-top: 10px;
 					width: 100%;
@@ -242,7 +277,7 @@ body{
 						}
 						&#slides_indicators{
 							@include clrfx;
-							@include clearfix;
+							//@include clearfix;
 							padding: 12px 17.5px;
 							div{
 								background-color: #FFF;
@@ -259,10 +294,24 @@ body{
 					}
 				}
 			}
+		}
+		#scroll_down{
+			bottom: 10px;
+			position: absolute;
+			text-align: center;
+			width: 100%;
+			div{
+				font-size: 1.5em;
+				font-weight: bold;
+				margin: auto;
+			}
+			&:hover{
+				cursor: pointer;
+			}
 		}		
 	}
 	#bg_container{
-		@include clearfix;
+		//@include clearfix;
 		@include clrfx;	
 		background: url(../images/landing-photo.jpg) no-repeat center;
 		@include background-size(100% 100%);
@@ -277,7 +326,7 @@ body{
 		&[class^="icon-"]{ 
 			li{
 				//@include stretch(false, 1, false, 1);
-				font-size: 1.04em;
+				font-size: 1.125em;
 				font-weight: bold;
 				line-height: 30px;
 				margin: 12px auto;

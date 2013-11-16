@@ -70,7 +70,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* inc lists */
 /* inc clearfix */
-/**/
+/* reserved */
 /* line 61, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
 * html {
   font-size: 100%;
@@ -82,91 +82,109 @@ html {
   line-height: 1.5em;
 }
 
-/* line 39, ../sass/screen.scss */
+/* variables */
+/* mixins, Baby! */
+/* Основной тёмно-синий фон (нижняя часть страницы. Меню (немного отличается(?))) */
+/* Стандартная зелёная "кнопка "*/
+/* Спрайт. ...если нужен, конечно. */
+/*	common classes */
+/* line 59, ../sass/screen.scss */
 .client-face-1 {
   background-position: 0 0;
   width: 90px;
   height: 90px;
 }
 
-/* line 40, ../sass/screen.scss */
+/* line 60, ../sass/screen.scss */
 .client-face-2 {
   background-position: 0 -94px;
   width: 90px;
   height: 90px;
 }
 
-/* line 41, ../sass/screen.scss */
+/* line 61, ../sass/screen.scss */
 .client-face-3 {
   background-position: 0 -188px;
   width: 90px;
   height: 90px;
 }
 
-/* line 42, ../sass/screen.scss */
+/* line 62, ../sass/screen.scss */
 .how-it-works {
   background-position: 0 -397px;
   width: 453px;
   height: 193px;
 }
 
-/* line 43, ../sass/screen.scss */
+/* line 63, ../sass/screen.scss */
 .icon-payment-types {
   background-position: 0 -624px;
   width: 181px;
   height: 32px;
 }
 
-/* line 44, ../sass/screen.scss */
+/* line 64, ../sass/screen.scss */
 .lo-1 {
   background-position: 0 -689px;
   width: 186px;
   height: 107px;
 }
 
-/* line 45, ../sass/screen.scss */
+/* line 65, ../sass/screen.scss */
 .lo-2 {
   background-position: 0 -800px;
   width: 186px;
   height: 107px;
 }
 
-/* line 46, ../sass/screen.scss */
+/* line 66, ../sass/screen.scss */
 .lo-3 {
   background-position: 0 -911px;
   width: 186px;
   height: 107px;
 }
 
-/* line 47, ../sass/screen.scss */
+/* line 67, ../sass/screen.scss */
 .lo-4 {
   background-position: 0 -1022px;
   width: 186px;
   height: 107px;
 }
 
-/* line 48, ../sass/screen.scss */
+/* line 68, ../sass/screen.scss */
 .lo-5 {
   background-position: 0 -1133px;
   width: 186px;
   height: 106px;
 }
 
-/* line 49, ../sass/screen.scss */
+/* line 69, ../sass/screen.scss */
 .lo-6 {
   background-position: 0 -1243px;
   width: 186px;
   height: 107px;
 }
 
-/* line 50, ../sass/screen.scss */
+/* line 70, ../sass/screen.scss */
 .lo-7 {
   background-position: 0 -1354px;
   width: 236px;
   height: 116px;
 }
 
-/* line 52, ../sass/screen.scss */
+/* line 72, ../sass/screen.scss */
+.clearfix {
+  overflow: hidden;
+  *zoom: 1;
+  clear: both;
+  display: block;
+}
+/* line 26, ../sass/screen.scss */
+.clearfix:after {
+  content: "";
+}
+
+/* line 75, ../sass/screen.scss */
 .corner {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
@@ -175,58 +193,67 @@ html {
   transform: rotate(45deg);
 }
 
-/* line 56, ../sass/screen.scss */
+/* line 78, ../sass/screen.scss */
+.pointer_down {
+  background: url(../images/icon-down.png) no-repeat;
+  height: 26px;
+  margin: 14px auto !important;
+  width: 26px;
+}
+
+/* redefine tags */
+/* line 86, ../sass/screen.scss */
 b {
   font-weight: bold;
 }
 
-/* line 59, ../sass/screen.scss */
+/* line 89, ../sass/screen.scss */
 em {
   font-style: italic;
 }
 
-/* line 63, ../sass/screen.scss */
+/* line 93, ../sass/screen.scss */
 html, body {
   height: 100%;
 }
 
-/* line 67, ../sass/screen.scss */
+/* line 97, ../sass/screen.scss */
 body {
   background-size: cover;
-  /*	Сразу после <body>, чтобы позиционировать относительно него */
+  /*	Дочерний для <body>, чтобы позиционировать относительно него */
 }
-/* line 69, ../sass/screen.scss */
+/* line 99, ../sass/screen.scss */
 body * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   font-family: Lato, "Times New Roman";
 }
-/* line 73, ../sass/screen.scss */
+/* line 103, ../sass/screen.scss */
 body section {
   display: inline;
   float: left;
 }
-/* line 75, ../sass/screen.scss */
+/* line 105, ../sass/screen.scss */
 #stuff body section {
   width: 50%;
 }
-/* line 79, ../sass/screen.scss */
+/* line 109, ../sass/screen.scss */
 body .header2 {
   font-size: 2.5em;
   font-weight: bold;
 }
-/* line 83, ../sass/screen.scss */
+/* line 113, ../sass/screen.scss */
 body .middle {
   margin: auto;
   max-width: 780px;
 }
-/* line 87, ../sass/screen.scss */
+/* line 117, ../sass/screen.scss */
 body .wide {
   margin: auto;
   max-width: 920px;
 }
-/* line 92, ../sass/screen.scss */
+/* line 122, ../sass/screen.scss */
 body #content {
   background-color: #0f1128;
   min-height: 100%;
@@ -235,51 +262,98 @@ body #content {
   width: 100%;
   z-index: 2;
 }
-/* line 99, ../sass/screen.scss */
+/* line 129, ../sass/screen.scss */
 body #content #stuff {
   color: white;
   padding: 80px 0;
 }
-/* line 103, ../sass/screen.scss */
+/* line 133, ../sass/screen.scss */
 body #content #stuff h2.header2 {
   margin-bottom: 20px;
 }
-/* line 105, ../sass/screen.scss */
+/* line 135, ../sass/screen.scss */
 body #content #stuff h2.header2 + p {
   margin: 30px auto;
 }
-/* line 110, ../sass/screen.scss */
+/* line 140, ../sass/screen.scss */
 body #content #stuff section {
   padding-right: 10px;
   width: 50%;
 }
-/* line 113, ../sass/screen.scss */
+/* line 143, ../sass/screen.scss */
 body #content #stuff section .header2 {
   font-size: 1.625em;
   padding-bottom: 30px;
 }
-/* line 117, ../sass/screen.scss */
+/* line 147, ../sass/screen.scss */
 body #content #stuff section ul {
   margin-top: -19px;
 }
-/* line 123, ../sass/screen.scss */
+/* line 149, ../sass/screen.scss */
+body #content #stuff section ul[class^="icon-"] li {
+  line-height: 29px;
+}
+/* line 155, ../sass/screen.scss */
+body #content .clearfix {
+  text-align: center;
+}
+/* line 158, ../sass/screen.scss */
+body #content .clearfix p.middle {
+  color: white;
+  margin-bottom: 10px;
+  margin-top: 13px;
+  text-align: left;
+}
+/* line 165, ../sass/screen.scss */
+body #content .clearfix a {
+  background-color: #5fb00d;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  border: solid 1px #4c8f09;
+  box-shadow: 1px 1px 3px 0 #666;
+  color: white;
+  display: block;
+  margin-top: 18px;
+  padding: 12px 40px;
+  text-align: center;
+  text-decoration: none;
+  width: auto;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}
+/* line 49, ../sass/screen.scss */
+body #content .clearfix a:hover {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #5fb00d), color-stop(100%, #69c30e));
+  background-image: -webkit-linear-gradient(#5fb00d, #69c30e);
+  background-image: -moz-linear-gradient(#5fb00d, #69c30e);
+  background-image: -o-linear-gradient(#5fb00d, #69c30e);
+  background-image: linear-gradient(#5fb00d, #69c30e);
+}
+/* line 171, ../sass/screen.scss */
 body #top {
   min-height: 100%;
   position: fixed;
   width: 100%;
   z-index: 1;
 }
-/* line 129, ../sass/screen.scss */
+/* line 177, ../sass/screen.scss */
 body #top header #top_middle {
   margin: 51px auto 14px;
 }
-/* line 132, ../sass/screen.scss */
+/* line 180, ../sass/screen.scss */
 body #top header nav {
   background-color: #0f1128;
   overflow: hidden;
   *zoom: 1;
 }
-/* line 135, ../sass/screen.scss */
+/* line 183, ../sass/screen.scss */
 body #top header nav #logo {
   background: url(../images/logo.png) no-repeat top left;
   display: inline;
@@ -288,17 +362,17 @@ body #top header nav #logo {
   margin: 19px auto 12px;
   width: 203px;
 }
-/* line 141, ../sass/screen.scss */
+/* line 189, ../sass/screen.scss */
 body #top header nav #logo a {
   visibility: hidden;
 }
-/* line 145, ../sass/screen.scss */
+/* line 193, ../sass/screen.scss */
 body #top header nav menu {
   display: inline;
   float: right;
   margin-right: 7px;
 }
-/* line 148, ../sass/screen.scss */
+/* line 196, ../sass/screen.scss */
 body #top header nav menu ul {
   margin: 0;
   padding: 0;
@@ -330,31 +404,31 @@ body #top header nav menu ul li:last-child {
 body #top header nav menu ul li.last {
   padding-left: 0;
 }
-/* line 151, ../sass/screen.scss */
+/* line 199, ../sass/screen.scss */
 body #top header nav menu ul li {
   line-height: 17px;
   padding: 0;
   margin: auto 11.5px;
 }
-/* line 155, ../sass/screen.scss */
+/* line 203, ../sass/screen.scss */
 body #top header nav menu ul li a {
   color: white;
   font-size: 0.9375em;
   opacity: 0.8;
   text-decoration: none;
 }
-/* line 167, ../sass/screen.scss */
+/* line 215, ../sass/screen.scss */
 body #top main section {
   margin-top: 18px;
 }
-/* line 169, ../sass/screen.scss */
+/* line 217, ../sass/screen.scss */
 body #top main section#guarantee-badge {
   display: inline;
   float: right;
   margin: 19px 2px;
   width: 195px;
 }
-/* line 173, ../sass/screen.scss */
+/* line 221, ../sass/screen.scss */
 body #top main section#guarantee-badge .pseudolink {
   background: url(../images/pic.png) no-repeat top left;
   background-position: 0 -282px;
@@ -362,7 +436,7 @@ body #top main section#guarantee-badge .pseudolink {
   margin: 10px auto;
   width: 140px;
 }
-/* line 181, ../sass/screen.scss */
+/* line 229, ../sass/screen.scss */
 body #top main section#guarantee-badge a:last-child {
   background-color: #5fb00d;
   -webkit-border-radius: 5px;
@@ -380,7 +454,7 @@ body #top main section#guarantee-badge a:last-child {
   text-decoration: none;
   width: 100%;
 }
-/* line 193, ../sass/screen.scss */
+/* line 49, ../sass/screen.scss */
 body #top main section#guarantee-badge a:last-child:hover {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #5fb00d), color-stop(100%, #69c30e));
   background-image: -webkit-linear-gradient(#5fb00d, #69c30e);
@@ -388,7 +462,7 @@ body #top main section#guarantee-badge a:last-child:hover {
   background-image: -o-linear-gradient(#5fb00d, #69c30e);
   background-image: linear-gradient(#5fb00d, #69c30e);
 }
-/* line 199, ../sass/screen.scss */
+/* line 234, ../sass/screen.scss */
 body #top main section#advokats {
   overflow: hidden;
   *zoom: 1;
@@ -397,29 +471,29 @@ body #top main section#advokats {
   margin-top: 10px;
   width: 100%;
 }
-/* line 25, ../sass/screen.scss */
+/* line 26, ../sass/screen.scss */
 body #top main section#advokats:after {
   content: "";
 }
-/* line 205, ../sass/screen.scss */
+/* line 240, ../sass/screen.scss */
 body #top main section#advokats div#adv {
   display: inline;
   float: left;
   width: 100px;
 }
-/* line 209, ../sass/screen.scss */
+/* line 244, ../sass/screen.scss */
 body #top main section#advokats div#adv img:first-child {
   margin-left: 5px;
   display: inline;
   float: left;
 }
-/* line 214, ../sass/screen.scss */
+/* line 249, ../sass/screen.scss */
 body #top main section#advokats div#adv p {
   line-height: 20px;
   opacity: 0.8;
   text-align: center;
 }
-/* line 220, ../sass/screen.scss */
+/* line 255, ../sass/screen.scss */
 body #top main section#advokats div#dossier {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -433,7 +507,7 @@ body #top main section#advokats div#dossier {
   padding: 20px;
   position: relative;
 }
-/* line 227, ../sass/screen.scss */
+/* line 262, ../sass/screen.scss */
 body #top main section#advokats div#dossier .crn_wrapper {
   height: 20px;
   left: -20px;
@@ -442,7 +516,7 @@ body #top main section#advokats div#dossier .crn_wrapper {
   width: 20px;
   overflow: hidden;
 }
-/* line 234, ../sass/screen.scss */
+/* line 269, ../sass/screen.scss */
 body #top main section#advokats div#dossier .crn_wrapper .corner {
   background: white;
   height: 24px;
@@ -450,19 +524,19 @@ body #top main section#advokats div#dossier .crn_wrapper .corner {
   margin-top: -12px;
   margin-left: 8px;
 }
-/* line 243, ../sass/screen.scss */
+/* line 278, ../sass/screen.scss */
 body #top main section#advokats div#slides_indicators {
-  clear: both;
-  display: block;
   overflow: hidden;
   *zoom: 1;
+  clear: both;
+  display: block;
   padding: 12px 17.5px;
 }
-/* line 25, ../sass/screen.scss */
+/* line 26, ../sass/screen.scss */
 body #top main section#advokats div#slides_indicators:after {
   content: "";
 }
-/* line 247, ../sass/screen.scss */
+/* line 282, ../sass/screen.scss */
 body #top main section#advokats div#slides_indicators div {
   background-color: #FFF;
   -webkit-border-radius: 2px;
@@ -476,11 +550,28 @@ body #top main section#advokats div#slides_indicators div {
   margin-right: 10px;
   width: 15px;
 }
-/* line 254, ../sass/screen.scss */
+/* line 289, ../sass/screen.scss */
 body #top main section#advokats div#slides_indicators div.active {
   background-color: #0f1128;
 }
-/* line 264, ../sass/screen.scss */
+/* line 298, ../sass/screen.scss */
+body #top #scroll_down {
+  bottom: 10px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+/* line 303, ../sass/screen.scss */
+body #top #scroll_down div {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: auto;
+}
+/* line 308, ../sass/screen.scss */
+body #top #scroll_down:hover {
+  cursor: pointer;
+}
+/* line 313, ../sass/screen.scss */
 body #bg_container {
   overflow: hidden;
   *zoom: 1;
@@ -495,22 +586,22 @@ body #bg_container {
   width: 100%;
   z-index: -1;
 }
-/* line 25, ../sass/screen.scss */
+/* line 26, ../sass/screen.scss */
 body #bg_container:after {
   content: "";
 }
-/* line 274, ../sass/screen.scss */
+/* line 323, ../sass/screen.scss */
 body ul#ok_left {
   margin-top: -5px;
 }
-/* line 278, ../sass/screen.scss */
+/* line 327, ../sass/screen.scss */
 body ul[class^="icon-"] li {
-  font-size: 1.04em;
+  font-size: 1.125em;
   font-weight: bold;
   line-height: 30px;
   margin: 12px auto;
 }
-/* line 285, ../sass/screen.scss */
+/* line 334, ../sass/screen.scss */
 body ul[class^="icon-"] li span:first-child {
   background: url(../images/pic.png) no-repeat top left;
   height: 30px;
@@ -523,11 +614,11 @@ body ul[class^="icon-"] li span:first-child {
   margin-top: -3px;
   width: 36px;
 }
-/* line 297, ../sass/screen.scss */
+/* line 346, ../sass/screen.scss */
 body ul.icon-ok li span[ok] {
   background-position: 0 -592px;
 }
-/* line 304, ../sass/screen.scss */
+/* line 353, ../sass/screen.scss */
 body ul.icon-x li span[x] {
   background-position: 0 -657px;
 }
