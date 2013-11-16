@@ -13,6 +13,22 @@
 <script src="js/js.js"></script>
 <!-- Для production будет убран: -->
 <script src="js/debug.js"></script>
+<style>
+#mobile_search{
+	display:none;
+	clear: both;
+	background-color:white;
+}
+
+@media (max-width:800px){
+	#mobile_search{
+		display:block;
+	}
+	#menu_top {
+		display:none;
+	}
+}
+</style>
 </head>
 <body>
 	<!-- Верхний фиксированный блок -->
@@ -23,8 +39,13 @@
                     <h1 id="logo">
                         <a href="#">Advokat<b>svar</b></a>
                     </h1>
+                    
+                    <div id="mobile_search">
+                    	mobile search is here
+                    </div>
+					<!-- Верхнее меню -->                    
                     <menu>
-                        <ul>
+                        <ul id="menu_top">
                             <li><a href="#">FAQ</a></li>
                             <li><a href="#">Trygd</a></li>
                             <li><a href="#">Familie / Samliv</a></li>
