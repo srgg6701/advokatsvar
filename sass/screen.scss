@@ -20,9 +20,15 @@ $color-salad-border:#4C8F09;
 $color-salad-shadow:#71B929;
 $max-width:920px;
 $middle-width:780px;
+$mob-offset:30px;
 
 
 /* mixins, Baby! */
+@mixin bg_sky($alignment:center){
+	background: url(../images/landing-photo.jpg) no-repeat $alignment;
+	@include background-size(100% 100%);
+}	
+/* classic, yep */
 @mixin clrfx{
 	@include clearfix;
 	&:after{
@@ -57,7 +63,7 @@ $middle-width:780px;
 	background: url(../images/pic.png) no-repeat top left;
 }
 /* добавить отступы в мобильном режиме */
-@mixin mobile-offset($top:0,$right:30px,$bottom:0,$left:30px){
+@mixin mobile-offset($top:0,$right:$mob-offset,$bottom:0,$left:$mob-offset){
 	@include box-sizing(border-box);
 	padding: $top $right $bottom $left !important;
 }
@@ -414,8 +420,7 @@ section{
 }
 #bg_container{
 	@include clrfx;	
-	background: url(../images/landing-photo.jpg) no-repeat center;
-	@include background-size(100% 100%);
+	@include bg_sky();
 	min-height: 100%;
 	width: 100%;
 	z-index: -1;				
@@ -458,6 +463,7 @@ ul{
 }	
 
 /* media queries */
+/* tablet */
 @media (max-width:800px){
 	#mobile_search{
 		display:block !important;
@@ -469,18 +475,94 @@ ul{
 		@include mobile-offset(0,12px,0,12px);
 	}
 	#top_header_box,
-	main{
+	main,
+	#stuff,
+	#txt_placeholder{
 		@include mobile-offset();
 	}
+	#top{
+		position: inherit;
+		@include bg_sky(left);
+	}
+	#stuff{
+		padding-bottom: 80px !important;
+		&>h2.header2{
+			font-size: 2.75em;
+			margin-top: 52px !important;
+		}
+		section{
+			margin-top: -42px;
+			font-size: 1.125em;
+			h2{
+				margin-top: 52px !important;	
+			}
+		}
+	}
 	#top_middle{
-		line-height: 1.3em;
-		font-size: 40px;
-		margin-bottom: 0px;
-		margin-top: 0.5em;
+		line-height: 1.3em !important;
+		font-size: 40px !important;
+		margin-bottom: 0px !important;
+		margin-top: 0.5em !important;
 	}
 	#guarantee-badge {
 		display: block !important;
 		clear: both !important;
 		width: 100% !important;
 	}
-}				
+	#advokats{
+		min-height: 230px;
+		position: relative;
+	}
+	#dossier{
+		.crn_wrapper{
+			display: none;
+		}
+	}
+	#adv{
+		z-index: 1;
+		position: absolute;
+		right: 44px;
+		top: 98px;
+	}
+	#scroll_down{
+		display: none;
+	}
+	#backward{
+		/* т.к. оступ сверху трогать не надо в данном случае */
+		padding-left: $mob-offset;
+		padding-right: $mob-offset;
+		section{
+			width: 100% !important;
+			&#feedback{
+				h4{
+					text-align:left !important;
+				}
+				form{
+					float:none !important;
+				}
+			}
+		}
+	}
+	ul.icon-x{
+		span{
+			background-position: 0 -656px !important;
+		}
+	}
+}		
+/* phone */
+@media (max-width:480px){
+	#stuff{
+		h2.header2{
+			font-size: 1.875em;
+		}
+		section{
+			width: 100% !important;
+			h2.header2{
+				font-size: 1.375em;
+			}	
+		}
+	}
+	#bottom_logo{
+		padding-top: 0 !important;
+	}
+}		
