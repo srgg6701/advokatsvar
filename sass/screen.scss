@@ -238,7 +238,7 @@ section{
 	#stuff{	
 		color: $color-lightest; 
 		padding: 80px 0;
-		h2{
+		&>h2{
 			&.header2{
 				margin-bottom: -18px;
 				margin-top: -36px;
@@ -321,6 +321,7 @@ section{
 		}		
 	}
 	main{
+		@include clrfx;
 		section{
 			margin-top: 18px;
 			&#guarantee-badge{ 
@@ -481,6 +482,7 @@ ul{
 		@include mobile-offset();
 	}
 	#top{
+		@include clrfx;
 		position: inherit;
 		@include bg_sky(left);
 	}
@@ -488,7 +490,7 @@ ul{
 		padding-bottom: 80px !important;
 		&>h2.header2{
 			font-size: 2.75em;
-			margin-top: 52px !important;
+			//margin-top: 52px !important;
 		}
 		section{
 			margin-top: -42px;
@@ -513,19 +515,35 @@ ul{
 		min-height: 230px;
 		position: relative;
 	}
+	#adv{
+		float: right !important;
+		margin-right: 50px;
+		margin-top: -15px;
+		&>img{
+			float: none;
+		}
+	}
 	#dossier{
+		max-width: 100% !important;
+		position: initial !important;
 		.crn_wrapper{
 			display: none;
 		}
 	}
-	#adv{
-		z-index: 1;
-		position: absolute;
-		right: 44px;
-		top: 98px;
+	#slides_indicators{
+		clear: left !important;
+		width: 200px;
+		white-space: nowrap;
 	}
 	#scroll_down{
 		display: none;
+	}
+	#bg_container{
+		display: none;//block;
+	}
+	#content{
+		position: relative;
+		top:0;
 	}
 	#backward{
 		/* т.к. оступ сверху трогать не надо в данном случае */
@@ -562,6 +580,18 @@ ul{
 			}	
 		}
 	}
+	/*#bg_container{
+		display: none;
+	}
+	#content{
+		position: relative;
+		top:0;
+	}
+	#stuff{
+		&>h2.header2{
+			margin-top: 0 !important;
+		}
+	}*/
 	#bottom_logo{
 		padding-top: 0 !important;
 	}
