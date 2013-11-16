@@ -1,3 +1,4 @@
+@charset "IBM866";
 /* Welcome to Compass.
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
@@ -185,75 +186,101 @@ em {
 }
 
 /* line 63, ../sass/screen.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 67, ../sass/screen.scss */
 body {
   background-size: cover;
+  /*	Сразу после <body>, чтобы позиционировать относительно него */
 }
-/* line 65, ../sass/screen.scss */
+/* line 69, ../sass/screen.scss */
 body * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   font-family: Lato, "Times New Roman";
 }
-/* line 69, ../sass/screen.scss */
+/* line 73, ../sass/screen.scss */
 body section {
   display: inline;
   float: left;
 }
-/* line 71, ../sass/screen.scss */
+/* line 75, ../sass/screen.scss */
 #stuff body section {
   width: 50%;
 }
-/* line 75, ../sass/screen.scss */
+/* line 79, ../sass/screen.scss */
 body .header2 {
   font-size: 2.5em;
   font-weight: bold;
 }
-/* line 79, ../sass/screen.scss */
+/* line 83, ../sass/screen.scss */
 body .middle {
   margin: auto;
   max-width: 780px;
 }
-/* line 83, ../sass/screen.scss */
+/* line 87, ../sass/screen.scss */
 body .wide {
   margin: auto;
   max-width: 920px;
 }
-/* line 87, ../sass/screen.scss */
-body #container {
-  overflow: hidden;
-  *zoom: 1;
-  clear: both;
-  display: block;
+/* line 92, ../sass/screen.scss */
+body #content {
+  background-color: #0f1128;
+  min-height: 100%;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  z-index: 2;
 }
-/* line 25, ../sass/screen.scss */
-body #container:after {
-  content: "";
+/* line 99, ../sass/screen.scss */
+body #content #stuff {
+  color: white;
+  padding: 80px 0;
 }
-/* line 90, ../sass/screen.scss */
-body #container #top {
-  background: url(../images/landing-photo.jpg) no-repeat center;
-  -webkit-background-size: 100% 100%;
-  -moz-background-size: 100% 100%;
-  -o-background-size: 100% 100%;
-  background-size: 100% 100%;
+/* line 103, ../sass/screen.scss */
+body #content #stuff h2.header2 {
+  margin-bottom: 20px;
+}
+/* line 105, ../sass/screen.scss */
+body #content #stuff h2.header2 + p {
+  margin: 30px auto;
+}
+/* line 110, ../sass/screen.scss */
+body #content #stuff section {
+  padding-right: 10px;
+  width: 50%;
+}
+/* line 113, ../sass/screen.scss */
+body #content #stuff section .header2 {
+  font-size: 1.625em;
+  padding-bottom: 30px;
+}
+/* line 117, ../sass/screen.scss */
+body #content #stuff section ul {
+  margin-top: -19px;
+}
+/* line 123, ../sass/screen.scss */
+body #top {
   min-height: 100%;
   position: fixed;
   width: 100%;
-  z-index: -1;
+  z-index: 1;
 }
-/* line 98, ../sass/screen.scss */
-body #container #top header #top_middle {
+/* line 129, ../sass/screen.scss */
+body #top header #top_middle {
   margin: 51px auto 14px;
 }
-/* line 101, ../sass/screen.scss */
-body #container #top header nav {
+/* line 132, ../sass/screen.scss */
+body #top header nav {
   background-color: #0f1128;
   overflow: hidden;
   *zoom: 1;
 }
-/* line 104, ../sass/screen.scss */
-body #container #top header nav #logo {
+/* line 135, ../sass/screen.scss */
+body #top header nav #logo {
   background: url(../images/logo.png) no-repeat top left;
   display: inline;
   float: left;
@@ -261,18 +288,18 @@ body #container #top header nav #logo {
   margin: 19px auto 12px;
   width: 203px;
 }
-/* line 110, ../sass/screen.scss */
-body #container #top header nav #logo a {
+/* line 141, ../sass/screen.scss */
+body #top header nav #logo a {
   visibility: hidden;
 }
-/* line 114, ../sass/screen.scss */
-body #container #top header nav menu {
+/* line 145, ../sass/screen.scss */
+body #top header nav menu {
   display: inline;
   float: right;
   margin-right: 7px;
 }
-/* line 117, ../sass/screen.scss */
-body #container #top header nav menu ul {
+/* line 148, ../sass/screen.scss */
+body #top header nav menu ul {
   margin: 0;
   padding: 0;
   border: 0;
@@ -281,7 +308,7 @@ body #container #top header nav menu ul {
   margin: 21px auto 12px;
 }
 /* line 60, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
-body #container #top header nav menu ul li {
+body #top header nav menu ul li {
   list-style-image: none;
   list-style-type: none;
   margin-left: 0;
@@ -292,51 +319,51 @@ body #container #top header nav menu ul li {
   padding-right: 7px;
 }
 /* line 48, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
-body #container #top header nav menu ul li:first-child, body #container #top header nav menu ul li.first {
+body #top header nav menu ul li:first-child, body #top header nav menu ul li.first {
   padding-right: 0;
 }
 /* line 49, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
-body #container #top header nav menu ul li:last-child {
+body #top header nav menu ul li:last-child {
   padding-left: 0;
 }
 /* line 50, C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
-body #container #top header nav menu ul li.last {
+body #top header nav menu ul li.last {
   padding-left: 0;
 }
-/* line 120, ../sass/screen.scss */
-body #container #top header nav menu ul li {
+/* line 151, ../sass/screen.scss */
+body #top header nav menu ul li {
   line-height: 17px;
   padding: 0;
   margin: auto 11.5px;
 }
-/* line 124, ../sass/screen.scss */
-body #container #top header nav menu ul li a {
+/* line 155, ../sass/screen.scss */
+body #top header nav menu ul li a {
   color: white;
   font-size: 0.9375em;
   opacity: 0.8;
   text-decoration: none;
 }
-/* line 136, ../sass/screen.scss */
-body #container #top main section {
+/* line 167, ../sass/screen.scss */
+body #top main section {
   margin-top: 18px;
 }
-/* line 138, ../sass/screen.scss */
-body #container #top main section#guarantee-badge {
+/* line 169, ../sass/screen.scss */
+body #top main section#guarantee-badge {
   display: inline;
   float: right;
   margin: 19px 2px;
   width: 195px;
 }
-/* line 142, ../sass/screen.scss */
-body #container #top main section#guarantee-badge .pseudolink {
+/* line 173, ../sass/screen.scss */
+body #top main section#guarantee-badge .pseudolink {
   background: url(../images/pic.png) no-repeat top left;
   background-position: 0 -282px;
   height: 112px;
   margin: 10px auto;
   width: 140px;
 }
-/* line 150, ../sass/screen.scss */
-body #container #top main section#guarantee-badge a:last-child {
+/* line 181, ../sass/screen.scss */
+body #top main section#guarantee-badge a:last-child {
   background-color: #5fb00d;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -353,16 +380,16 @@ body #container #top main section#guarantee-badge a:last-child {
   text-decoration: none;
   width: 100%;
 }
-/* line 162, ../sass/screen.scss */
-body #container #top main section#guarantee-badge a:last-child:hover {
+/* line 193, ../sass/screen.scss */
+body #top main section#guarantee-badge a:last-child:hover {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #5fb00d), color-stop(100%, #69c30e));
   background-image: -webkit-linear-gradient(#5fb00d, #69c30e);
   background-image: -moz-linear-gradient(#5fb00d, #69c30e);
   background-image: -o-linear-gradient(#5fb00d, #69c30e);
   background-image: linear-gradient(#5fb00d, #69c30e);
 }
-/* line 168, ../sass/screen.scss */
-body #container #top main section#advokats {
+/* line 199, ../sass/screen.scss */
+body #top main section#advokats {
   overflow: hidden;
   *zoom: 1;
   clear: both;
@@ -371,29 +398,29 @@ body #container #top main section#advokats {
   width: 100%;
 }
 /* line 25, ../sass/screen.scss */
-body #container #top main section#advokats:after {
+body #top main section#advokats:after {
   content: "";
 }
-/* line 174, ../sass/screen.scss */
-body #container #top main section#advokats div#adv {
+/* line 205, ../sass/screen.scss */
+body #top main section#advokats div#adv {
   display: inline;
   float: left;
   width: 100px;
 }
-/* line 178, ../sass/screen.scss */
-body #container #top main section#advokats div#adv img:first-child {
+/* line 209, ../sass/screen.scss */
+body #top main section#advokats div#adv img:first-child {
   margin-left: 5px;
   display: inline;
   float: left;
 }
-/* line 183, ../sass/screen.scss */
-body #container #top main section#advokats div#adv p {
+/* line 214, ../sass/screen.scss */
+body #top main section#advokats div#adv p {
   line-height: 20px;
   opacity: 0.8;
   text-align: center;
 }
-/* line 189, ../sass/screen.scss */
-body #container #top main section#advokats div#dossier {
+/* line 220, ../sass/screen.scss */
+body #top main section#advokats div#dossier {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
@@ -406,8 +433,8 @@ body #container #top main section#advokats div#dossier {
   padding: 20px;
   position: relative;
 }
-/* line 196, ../sass/screen.scss */
-body #container #top main section#advokats div#dossier .crn_wrapper {
+/* line 227, ../sass/screen.scss */
+body #top main section#advokats div#dossier .crn_wrapper {
   height: 20px;
   left: -20px;
   position: absolute;
@@ -415,16 +442,16 @@ body #container #top main section#advokats div#dossier .crn_wrapper {
   width: 20px;
   overflow: hidden;
 }
-/* line 203, ../sass/screen.scss */
-body #container #top main section#advokats div#dossier .crn_wrapper .corner {
+/* line 234, ../sass/screen.scss */
+body #top main section#advokats div#dossier .crn_wrapper .corner {
   background: white;
   height: 24px;
   width: 24px;
   margin-top: -12px;
   margin-left: 8px;
 }
-/* line 212, ../sass/screen.scss */
-body #container #top main section#advokats div#slides_indicators {
+/* line 243, ../sass/screen.scss */
+body #top main section#advokats div#slides_indicators {
   clear: both;
   display: block;
   overflow: hidden;
@@ -432,11 +459,11 @@ body #container #top main section#advokats div#slides_indicators {
   padding: 12px 17.5px;
 }
 /* line 25, ../sass/screen.scss */
-body #container #top main section#advokats div#slides_indicators:after {
+body #top main section#advokats div#slides_indicators:after {
   content: "";
 }
-/* line 216, ../sass/screen.scss */
-body #container #top main section#advokats div#slides_indicators div {
+/* line 247, ../sass/screen.scss */
+body #top main section#advokats div#slides_indicators div {
   background-color: #FFF;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
@@ -449,58 +476,42 @@ body #container #top main section#advokats div#slides_indicators div {
   margin-right: 10px;
   width: 15px;
 }
-/* line 223, ../sass/screen.scss */
-body #container #top main section#advokats div#slides_indicators div.active {
+/* line 254, ../sass/screen.scss */
+body #top main section#advokats div#slides_indicators div.active {
   background-color: #0f1128;
-}
-/* line 233, ../sass/screen.scss */
-body #container #content {
-  background-color: #0f1128;
-  min-height: 100%;
-  position: absolute;
-  top: 100%;
-  width: 100%;
-}
-/* line 239, ../sass/screen.scss */
-body #container #content #stuff {
-  color: white;
-  padding: 80px 0;
-}
-/* line 243, ../sass/screen.scss */
-body #container #content #stuff h2.header2 {
-  margin-bottom: 20px;
-}
-/* line 245, ../sass/screen.scss */
-body #container #content #stuff h2.header2 + p {
-  margin: 30px auto;
-}
-/* line 250, ../sass/screen.scss */
-body #container #content #stuff section {
-  padding-right: 10px;
-  width: 50%;
-}
-/* line 253, ../sass/screen.scss */
-body #container #content #stuff section .header2 {
-  font-size: 1.625em;
-  padding-bottom: 30px;
-}
-/* line 257, ../sass/screen.scss */
-body #container #content #stuff section ul {
-  margin-top: -19px;
 }
 /* line 264, ../sass/screen.scss */
-body #container ul#ok_left {
+body #bg_container {
+  overflow: hidden;
+  *zoom: 1;
+  clear: both;
+  display: block;
+  background: url(../images/landing-photo.jpg) no-repeat center;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;
+  min-height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+/* line 25, ../sass/screen.scss */
+body #bg_container:after {
+  content: "";
+}
+/* line 274, ../sass/screen.scss */
+body ul#ok_left {
   margin-top: -5px;
 }
-/* line 268, ../sass/screen.scss */
-body #container ul[class^="icon-"] li {
+/* line 278, ../sass/screen.scss */
+body ul[class^="icon-"] li {
   font-size: 1.04em;
   font-weight: bold;
   line-height: 30px;
   margin: 12px auto;
 }
-/* line 275, ../sass/screen.scss */
-body #container ul[class^="icon-"] li span:first-child {
+/* line 285, ../sass/screen.scss */
+body ul[class^="icon-"] li span:first-child {
   background: url(../images/pic.png) no-repeat top left;
   height: 30px;
   display: -moz-inline-stack;
@@ -512,11 +523,11 @@ body #container ul[class^="icon-"] li span:first-child {
   margin-top: -3px;
   width: 36px;
 }
-/* line 287, ../sass/screen.scss */
-body #container ul.icon-ok li span[ok] {
+/* line 297, ../sass/screen.scss */
+body ul.icon-ok li span[ok] {
   background-position: 0 -592px;
 }
-/* line 294, ../sass/screen.scss */
-body #container ul.icon-x li span[x] {
+/* line 304, ../sass/screen.scss */
+body ul.icon-x li span[x] {
   background-position: 0 -657px;
 }
