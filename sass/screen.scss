@@ -58,7 +58,7 @@ $mob-offset:30px;
 		@include background-image(linear-gradient(#5FB00D, #69C30E));
 	}
 }							
-/* Спрайт. ...если нужен, конечно. */
+/* Спрайт */
 @mixin pic{
 	background: url(../images/pic.png) no-repeat top left;
 }
@@ -76,13 +76,14 @@ $mob-offset:30px;
 	@include pic;
 	background-position: 0 -624px; width: 181px; height: 32px; 
 }
+/*	Адвокатские лица в спрайте; законсервированы :) 
 .lo-1{ background-position: 0 -689px; width: 186px; height: 107px; } 
 .lo-2{ background-position: 0 -800px; width: 186px; height: 107px; } 
 .lo-3{ background-position: 0 -911px; width: 186px; height: 107px; } 
 .lo-4{ background-position: 0 -1022px; width: 186px; height: 107px; } 
 .lo-5{ background-position: 0 -1133px; width: 186px; height: 106px; } 
 .lo-6{ background-position: 0 -1243px; width: 186px; height: 107px; } 
-.lo-7{ background-position: 0 -1354px; width: 236px; height: 116px; } 
+.lo-7{ background-position: 0 -1354px; width: 236px; height: 116px; } */
 
 .clearfix{
 	@include clrfx;
@@ -96,18 +97,26 @@ $mob-offset:30px;
 	margin: 14px auto !important;
 	width: 26px;
 }
+.header2{
+	font-size: 2.5em;
+	font-weight: bold;
+	line-height: 3em;
+}
+.middle{
+	margin: auto;
+	max-width: $middle-width;
+}	
+.wide{
+	margin: auto;
+	max-width: $max-width;
+}	
 
 /* redefine tags */
-b, strong{
-	font-weight: bold;
-}
-em{
-	font-style: italic;
-}
+b, strong{ font-weight: bold; }
 
-html,body{
-	height: 100%;
-}
+em{ font-style: italic; }
+
+html,body{ height: 100%; }
 
 body{
 	background-size: cover;
@@ -123,21 +132,8 @@ section{
 		width: 50%;
 	}
 }
-.header2{
-	font-size: 2.5em;
-	font-weight: bold;
-	line-height: 3em;
-}
-.middle{
-	margin: auto;
-	max-width: $middle-width;
-}	
-.wide{
-	margin: auto;
-	max-width: $max-width;
-}	
-/*	Дочерний для <body>, чтобы позиционировать относительно него */ 
 
+/*	Дочерний для <body>, чтобы позиционировать относительно него */ 
 #content{ 
 	background-color:$bg-dark-marine;
 	min-height: 100%;
@@ -169,6 +165,9 @@ section{
 							@include green-button(4px);
 							font-size: 16px;
 							width: 94px;
+							&:hover{
+								cursor:pointer;
+							}
 						}
 						input[type="text"]{
 							@include border-radius(4px);
@@ -386,7 +385,6 @@ section{
 					}
 					&#slides_indicators{
 						@include clrfx;
-						//@include clearfix;
 						padding: 12px 17.5px;
 						div{
 							background-color: #FFF;
@@ -490,7 +488,6 @@ ul{
 		padding-bottom: 80px !important;
 		&>h2.header2{
 			font-size: 2.75em;
-			//margin-top: 52px !important;
 		}
 		section{
 			margin-top: -42px;
@@ -580,18 +577,6 @@ ul{
 			}	
 		}
 	}
-	/*#bg_container{
-		display: none;
-	}
-	#content{
-		position: relative;
-		top:0;
-	}
-	#stuff{
-		&>h2.header2{
-			margin-top: 0 !important;
-		}
-	}*/
 	#bottom_logo{
 		padding-top: 0 !important;
 	}
